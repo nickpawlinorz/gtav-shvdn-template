@@ -1,2 +1,2 @@
 @echo off
-copy .\bin\Debug\net48\*.* "G:\SteamLibrary\steamapps\common\Grand Theft Auto V\scripts"
+Xcopy /E /C /H /I /Y /EXCLUDE:postbuildmoveignore.txt %1 %2

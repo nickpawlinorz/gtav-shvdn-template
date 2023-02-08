@@ -4,9 +4,12 @@
     <LangVersion>latest</LangVersion>
     <RootNamespace>gtav-shvdn-template</RootNamespace>
   </PropertyGroup>
-  
+
   <Target Name="PostBuild" BeforeTargets="PostBuildEvent">
-    <Exec Command="&quot;$(ProjectDir)postbuild.bat&quot;" />
+    <PropertyGroup>
+      <GTAVDirectory Condition="'$(GTAVDirectory)'==''">G:\SteamLibrary\steamapps\common\Grand Theft Auto V\scripts</GTAVDirectory>
+    </PropertyGroup>
+    <Exec Command="&quot;$(ProjectDir)postbuild.bat&quot; &quot;.\bin\Debug\net48\*.*&quot; &quot;$(GTAVDirectory)&quot;" />
   </Target>
 
   <ItemGroup>
