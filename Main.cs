@@ -12,6 +12,7 @@ namespace template
         // Will be executed on load (just one time)
         public Main()
         {
+            Notification.Show("Script has been loaded!");
             // Adds event handler bindings
             Tick += OnTick;
             KeyDown += OnKeyDown;
@@ -20,7 +21,6 @@ namespace template
         // Gets called each Frame
         private void OnTick(object sender, EventArgs e)
         {
-            Notification.Show("Script has been loaded!");
             //TODO: Do something
         }
 
