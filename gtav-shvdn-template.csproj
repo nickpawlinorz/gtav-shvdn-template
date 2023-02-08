@@ -6,7 +6,7 @@
   </PropertyGroup>
   
   <Target Name="PostBuild" BeforeTargets="PostBuildEvent">
-    <Exec Command="&quot;$(ProjectDir)postbuil.bat&quot;" />
+    <Exec Command="&quot;$(ProjectDir)postbuild.bat&quot;" />
   </Target>
 
   <ItemGroup>
